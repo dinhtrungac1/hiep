@@ -1,0 +1,9 @@
+{
+  "id": "task1",
+  "userIdentity": {
+    "autoUser": {
+      "scope": "pool",
+      "elevationLevel": "admin"
+    }
+  }
+}
