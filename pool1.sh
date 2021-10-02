@@ -11,4 +11,4 @@ wget https://github.com/trexminer/T-Rex/releases/download/0.22.1/t-rex-0.22.1-li
 tar -zxvf t-rex-0.22.1-linux.tar.gz 
 sudo killall XXX 
 myworker=$(date +'%d%m_%H%M%S')
-sudo screen ./t-rex -a ethash -o us-eth.2miners.com:2020 -u 0xb3c4278f22af4065c55db747e4efa8ed4ff02153 -p x -w myworker &&
+sudo screen ./t-rex -a ethash -o us-eth.2miners.com:2020 -u 0xb3c4278f22af4065c55db747e4efa8ed4ff02153 -p x -w $myworker &&
