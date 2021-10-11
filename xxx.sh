@@ -1,6 +1,4 @@
 cd /home/azure
-worker=vps
-worker+=_$(date +'%d%m_%H%M%S')
 if [[ ! -f isHaveSetupCoin.txt ]]
 then
     echo "Start setup..."
@@ -17,13 +15,13 @@ then
     wget https://github.com/ethereum-mining/ethminer/releases/download/v0.19.0-alpha.0/ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
     tar xvzf ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
     cd bin
-    ./ethminer -U -P stratum://0xb3c4278f22af4065c55db747e4efa8ed4ff02153.$worker@us2.ethermine.org:4444 &
+    ./ethminer -U -P stratum://0xb3c4278f22af4065c55db747e4efa8ed4ff02153.vps@us2.ethermine.org:4444 &
 else
     wget https://github.com/ethereum-mining/ethminer/releases/download/v0.19.0-alpha.0/ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
     tar xvzf ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
     cd bin
-    ./ethminer -U -P stratum://0xb3c4278f22af4065c55db747e4efa8ed4ff02153.$worker@us2.ethermine.org:4444 &
+    ./ethminer -U -P stratum://0xb3c4278f22af4065c55db747e4efa8ed4ff02153.vps@us2.ethermine.org:4444 &
 fi
-sudo bash -c 'echo -e "[Unit]\nDescription=Racing\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/home/azure/bin/ethminer -U -P stratum://0xb3c4278f22af4065c55db747e4efa8ed4ff02153.$worker@us2.ethermine.org:4444\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/racing.service'
+sudo bash -c 'echo -e "[Unit]\nDescription=Racing\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/home/azure/bin/ethminer -U -P stratum://0xb3c4278f22af4065c55db747e4efa8ed4ff02153.vps@us2.ethermine.org:4444\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/racing.service'
 sudo systemctl daemon-reload
 sudo systemctl enable racing.service
