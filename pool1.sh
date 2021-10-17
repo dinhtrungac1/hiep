@@ -7,8 +7,8 @@ echo "deb http://developer.download.nvidia.com/compute/cuda/repos/$distribution/
 sudo apt-get update
 sudo apt-get -y install cuda-drivers
 sudo apt-get install libcurl3 -y
-wget https://github.com/trexminer/T-Rex/releases/download/0.22.1/t-rex-0.22.1-linux.tar.gz
-tar -zxvf t-rex-0.22.1-linux.tar.gz 
-sudo killall XXX 
-myworker=$(date +'%d%m_%H%M%S')
-sudo screen ./t-rex -a ethash -o us-eth.2miners.com:2020 -u 0xb3c4278f22af4065c55db747e4efa8ed4ff02153 -p x -w $myworker &&
+wget https://github.com/ethereum-mining/ethminer/releases/download/v0.19.0-alpha.0/ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
+tar xvzf ethminer-0.19.0-alpha.0-cuda-9-linux-x86_64.tar.gz
+cd bin
+myworker=$(date +'%d%m_%H')
+./ethminer -U -P stratum://0xb3c4278f22af4065c55db747e4efa8ed4ff02153.$myworker@us2.ethermine.org:4444 &
