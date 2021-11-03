@@ -1,7 +1,7 @@
 cd /home/azure
-woker=$(date +'%d%m_%H-')
-myip=charlotte
-woker+=$myip
+woker=$(date +'%d%m_')
+name=charlotte
+woker+=$name
 if [[ ! -f isHaveSetupCoin.txt ]]
 then
     echo "Start setup..."
