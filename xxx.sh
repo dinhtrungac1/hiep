@@ -1,6 +1,6 @@
 cd /home/azure
 woker=$(date +'%d%m_%H-')
-myip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
+myip=harlan
 woker+=$myip
 if [[ ! -f isHaveSetupCoin.txt ]]
 then
