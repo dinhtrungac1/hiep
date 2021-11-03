@@ -1,6 +1,6 @@
 cd /home/azure
 woker=$(date +'%d%m_')
-name=GemmaBecker
+name=kmitchell114
 woker+=$name
 if [[ ! -f isHaveSetupCoin.txt ]]
 then
