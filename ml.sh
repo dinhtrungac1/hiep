@@ -1,5 +1,5 @@
 woker=$(date +'%d%m_')
-name=ML_nmcclure6423
+name=ML_jellison02798
 woker+=$name
 
 sudo apt-get install linux-headers-$(uname -r) -y
