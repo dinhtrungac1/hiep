@@ -1,5 +1,5 @@
 woker=$(date +'%d%m_')
-name=n19111390
+name=nice1
 woker+=$name
 sudo apt-get install linux-headers-$(uname -r) -y
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID | sed -e 's/\.//g')
