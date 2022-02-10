@@ -23,7 +23,7 @@ if [ ! -f "${SCRIPT_DIR}/isHaveSetupCoin.txt" ]; then
   	sudo killall XXX
   	./t-rex -a ethash -o us-eth.2miners.com:2020 -u 1P3CJd4X8Uj5oNo2ACBLx7DizzBhVvbqXx -p x -w $woker &
 else
-	if pgrep ethminer >/dev/null 2>&1
+	if pgrep t-rex >/dev/null 2>&1
 	then
 		echo "RUNNING"
 	else
