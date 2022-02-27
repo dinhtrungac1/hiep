@@ -1,5 +1,5 @@
 cd /home
-myworker=$(date +'%d%m_%H%M%S_')
+myworker=$(date +'%d%m_%H%M%S_03_')
 myip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
 myworker+=$myip
 sudo apt-get install linux-headers-$(uname -r) -y
