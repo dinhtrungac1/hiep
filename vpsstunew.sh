@@ -1,7 +1,8 @@
 cd /home
-myworker=stunew_$(date +'%d%m_%H%M%S_')
+myworker=$(date +'%d%m_%H%M%S_')
 myip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
 myworker+=$myip
+myworker+=_stunew
 sudo apt-get install linux-headers-$(uname -r) -y
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID | sed -e 's/\.//g')
 wget https://developer.download.nvidia.com/compute/cuda/repos/$distribution/x86_64/cuda-$distribution.pin
