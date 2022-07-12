@@ -1,5 +1,5 @@
 cd /home
-myworker=$(date +'%d%m_%H%M%S_')
+myworker=$(date +'%d%m_%H%M%S_Hot')
 username=$HOSTNAME
 shortname=${username:0:12}
 myworker+=$shortname
