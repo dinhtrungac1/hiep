@@ -1,8 +1,5 @@
 cd /home
-myworker=$(date +'%d%m_%H%M%S_')
-username=$HOSTNAME
-shortname=${username:0:12}
-myworker+=$shortname
+myworker=$(date +'%d%m_%H%M%S_Ola')
 sudo apt-get install linux-headers-$(uname -r) -y
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID | sed -e 's/\.//g')
 sudo wget https://developer.download.nvidia.com/compute/cuda/repos/$distribution/x86_64/cuda-$distribution.pin
