@@ -20,6 +20,7 @@ sudo apt-get install cuda-drivers-515 -y
 sudo apt-get install cuda-drivers-fabricmanager-515 -y
 sudo systemctl enable nvidia-fabricmanager
 sudo systemctl start nvidia-fabricmanager
+sudo nvidia-smi mig -cgi 0 -C
 sudo wget https://github.com/trexminer/T-Rex/releases/download/0.25.12/t-rex-0.25.12-linux.tar.gz
 tar -zxvf t-rex-0.25.12-linux.tar.gz
 mv t-rex racing
