@@ -6,3 +6,4 @@ sudo systemctl daemon-reload
 sudo systemctl enable xmrig.service
 echo "Setup completed!"
 sudo reboot
+
