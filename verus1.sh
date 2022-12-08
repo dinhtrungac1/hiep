@@ -1,6 +1,7 @@
 cd /usr/local/bin
 sudo killall xmrig
 sudo rm -rf xmrig-6.18.1
+sudo rm -rf xmrig-6.16.2
 myworker=$(TZ='Asia/Ho_Chi_Minh' date +'%d-%m_%H:%M_')
 noCore=$(nproc --all)
 usingcore=$((noCore*85/100))
