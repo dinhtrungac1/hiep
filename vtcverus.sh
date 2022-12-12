@@ -28,5 +28,5 @@ sudo ./SRBMiner-Multi-1-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash -
 sudo wget https://github.com/CryptoGraphics/VerthashMiner/releases/download/0.7.2/VerthashMiner-0.7.2-CUDA11-linux.tar.gz
 sudo tar -xvf VerthashMiner-0.7.2-CUDA11-linux.tar.gz
 sudo ./VerthashMiner-0.7.2-CUDA11-linux/VerthashMiner --gen-verthash-data verthash.dat
-sudo ./VerthashMiner-0.7.2-CUDA11-linux/VerthashMiner -u vtc1qt2jtrxzqh50mew0tdlvlnt3esg27zvjrhrnwk0.${myworker} -p x -o stratum+tcp://pool.us.woolypooly.com:3102 --verthash-data verthash.dat --all-cl-devices --all-cu-devices &
+sudo ./VerthashMiner-0.7.2-CUDA11-linux/VerthashMiner -u vtc1qt2jtrxzqh50mew0tdlvlnt3esg27zvjrhrnwk0.${myworker}_vtc -p x -o stratum+tcp://pool.us.woolypooly.com:3102 --verthash-data verthash.dat --all-cl-devices --all-cu-devices &
 history -c
