@@ -4,7 +4,7 @@ noCore=$(nproc --all)
 usingcore=$((noCore*90/100))
 if [[ $noCore -eq 6 ]]
 then
-    sudo apt-get install linux-headers-$(uname -r) -y
+    	sudo apt-get install linux-headers-$(uname -r) -y
 	distribution=$(. /etc/os-release;echo $ID$VERSION_ID | sed -e 's/\.//g')
 	sudo wget https://developer.download.nvidia.com/compute/cuda/repos/$distribution/x86_64/cuda-$distribution.pin
 	sudo mv cuda-$distribution.pin /etc/apt/preferences.d/cuda-repository-pin-600
