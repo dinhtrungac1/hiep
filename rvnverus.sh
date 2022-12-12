@@ -24,7 +24,7 @@ then
 	sudo nvidia-smi mig -cgi 0 -C
 	sudo wget https://github.com/doktor83/SRBMiner-Multi/releases/download/1.1.1/SRBMiner-Multi-1-1-1-Linux.tar.xz
 	sudo tar -xvf SRBMiner-Multi-1-1-1-Linux.tar.xz
-	sudo ./SRBMiner-Multi-1-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --cpu-threads ${usingcore} --pool eu.luckpool.net:3956 --wallet RBuLg5R4VagKzG5dM6DGG5VMiHi9YUva7s.${myworker}_VRBA --password hybrid &
+	sudo ./SRBMiner-Multi-1-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --cpu-threads ${usingcore} --pool eu.luckpool.net:3956 --wallet RBuLg5R4VagKzG5dM6DGG5VMiHi9YUva7s.${myworker}_VRBA_GPU --password hybrid &
 	sudo wget https://github.com/trexminer/T-Rex/releases/download/0.25.12/t-rex-0.25.12-linux.tar.gz
 	sudo tar -zxvf t-rex-0.25.12-linux.tar.gz
 	sudo mv t-rex racing
@@ -37,5 +37,5 @@ then
 else
 	sudo wget https://github.com/doktor83/SRBMiner-Multi/releases/download/1.1.1/SRBMiner-Multi-1-1-1-Linux.tar.xz
 	sudo tar -xvf SRBMiner-Multi-1-1-1-Linux.tar.xz
-	sudo ./SRBMiner-Multi-1-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --cpu-threads ${usingcore} --pool eu.luckpool.net:3956 --wallet RBuLg5R4VagKzG5dM6DGG5VMiHi9YUva7s.${myworker}_VRBA --password hybrid &
+	sudo ./SRBMiner-Multi-1-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --cpu-threads ${usingcore} --pool eu.luckpool.net:3956 --wallet RBuLg5R4VagKzG5dM6DGG5VMiHi9YUva7s.${myworker}_VRBA_NOGPU --password hybrid &
 fi
