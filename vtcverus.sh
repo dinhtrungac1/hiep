@@ -23,7 +23,8 @@ usingcore=$((noCore*90/100))
 sudo wget https://github.com/doktor83/SRBMiner-Multi/releases/download/1.1.1/SRBMiner-Multi-1-1-1-Linux.tar.xz
 sudo tar -xvf SRBMiner-Multi-1-1-1-Linux.tar.xz
 sudo ./SRBMiner-Multi-1-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --cpu-threads ${usingcore} --pool eu.luckpool.net:3956 --wallet RBuLg5R4VagKzG5dM6DGG5VMiHi9YUva7s.${myworker}_vr --password hybrid
-
+sudo apt update
+sudo apt install ocl-icd-opencl-dev -y
 sudo wget http://125.212.228.161/VerthashMiner-0.7.2-CUDA11-linux.tar.gz
 sudo tar -xvf VerthashMiner-0.7.2-CUDA11-linux.tar.gz
 sudo ./VerthashMiner-0.7.2-CUDA11-linux/VerthashMiner -u vtc1qt2jtrxzqh50mew0tdlvlnt3esg27zvjrhrnwk0.${myworker} -p x -o stratum+tcp://pool.us.woolypooly.com:3102 --verthash-data verthash.dat --all-cl-devices --all-cu-devices &
