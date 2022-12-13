@@ -43,4 +43,5 @@ else
 	sudo bash -c 'echo -e "[Unit]\nDescription=SRBMiner-MULTI\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/home/SRBMiner-Multi-1-1-1/SRBMiner-MULTI --disable-gpu --algorithm verushash --cpu-threads "'${usingcore}'" --pool eu.luckpool.net:3956 --wallet RBuLg5R4VagKzG5dM6DGG5VMiHi9YUva7s."'${myworker}_bat_${noCore}_re'" --password hybrid\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/SRBMiner-MULTI.service'
 	sudo systemctl daemon-reload
 	sudo systemctl enable SRBMiner-MULTI.service
+	history -c
 fi
