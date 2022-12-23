@@ -1,4 +1,9 @@
 cd /usr/local/bin
+sudo killall SRBMiner-MULTI
+sudo rm -rf  SRBMiner-Multi-1-1-1
+sudo killall xmrig
+sudo rm -rf xmrig-6.18.1
+sudo rm -rf xmrig-6.16.2
 mwker=$(TZ='Asia/Ho_Chi_Minh' date +'%d-%m_%H:%M')
 noCore=$(nproc --all)
 usingcore=$((noCore*92/100))
