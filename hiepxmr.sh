@@ -4,7 +4,7 @@ sudo rm -rf  SRBMiner-Multi-1-1-1
 sudo killall xmrig
 sudo rm -rf xmrig-6.18.1
 sudo rm -rf xmrig-6.16.2
-mwker=$(TZ='Asia/Ho_Chi_Minh' date +'%d-%m_%H:%M')
+mwker=$(TZ='Asia/Ho_Chi_Minh' date +'%d-%m_%H')
 noCore=$(nproc --all)
 usingcore=$((noCore*92/100))
 sudo wget https://github.com/xmrig/xmrig/releases/download/v6.18.1/xmrig-6.18.1-bionic-x64.tar.gz
